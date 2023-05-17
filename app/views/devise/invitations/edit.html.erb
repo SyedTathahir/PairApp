@@ -15,9 +15,9 @@
     </div>
   <% end %>
 
-  <div class="form-control">
+  <div class=" mb-8">
     <%= f.label :time_zone, class: 'label label-text' %>
-    <%= f.time_zone_select :time_zone  %>
+    <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.country_zones('US'), {}, {class:"select select-bordered w-full max-w-xs"}) %>
   </div>
 
 
@@ -25,3 +25,5 @@
     <%= f.submit t("devise.invitations.edit.submit_button"), class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+

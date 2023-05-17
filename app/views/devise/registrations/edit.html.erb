@@ -31,6 +31,11 @@
       <%= f.password_field :current_password, autocomplete: "current-password", class: 'input input-bordered' %>
     </div>
 
+    <div class=" mb-8">
+      <%= f.label :time_zone, class: 'label label-text' %>
+      <%= f.time_zone_select(:time_zone, ActiveSupport::TimeZone.country_zones('US'), {}, {class:"select select-bordered w-full max-w-xs"}) %>
+    </div>
+
     <div class="form-control mt-4">
       <%= f.submit "Update", class: 'btn btn-primary' %>
     </div>
